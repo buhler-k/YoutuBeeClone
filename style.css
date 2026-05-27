@@ -7,3 +7,33 @@
     background: black;
     color: white;
 }
+
+/* styling the nav bar */
+
+#logo {
+    height: 20px;
+    width: 92.986px;
+    padding-left: 26px;    padding-bottom: px;
+    margin-bottom: 55px;
+}
+
+.nav-bar {
+    display: flex;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* styling the categories class */
+.categories ul {
+    display: flex;
+
+    list-style-type: none;
+}
+    
+.sideBar {
+    margin-left: -90px;
+}
