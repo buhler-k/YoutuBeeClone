@@ -8,32 +8,122 @@
     color: white;
 }
 
+
 /* styling the nav bar */
 
-#logo {
+#logo a{
     height: 20px;
     width: 92.986px;
-    padding-left: 26px;    padding-bottom: px;
-    margin-bottom: 55px;
+    margin-right: px;
+    
 }
 
-.nav-bar {
+#container {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 10px;
+}
+
+.left-nav{
     display: flex;
 }
 
-.nav-items {
+.middle-nav {
+
+   /* padding-right: 65px; */
+
+}
+
+.right-nav {
+   
+}
+
+/* styling the tab*/
+
+.tab {
+    margin-top: 55px;
+    margin-left: 120px;
+    padding-left: 120px;
+    
+    
+    
+
+}
+#tab-list { 
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* styling the categories class */
-.categories ul {
-    display: flex;
-
     list-style-type: none;
-}
+    gap: 15px;
     
-.sideBar {
-    margin-left: -90px;
+}
+
+
+/* styling content */
+
+#content {
+    display: flex;
+    padding-left: 140px;
+    margin-left: 100px;
+}
+
+/* styling the section and sidebar */
+section {
+   display:flex;
+   width: 20vw;
+}
+
+.sidebar {
+ width: 15vw;
+ margin-left: 10px; 
+ margin-top: -57px;
+}
+
+.home-items{
+}
+
+
+/* styling the sub-channels */
+
+.sub-channels {
+    border-top: 1px solid ;
+}
+
+
+/* styling the personal-tab */
+
+.personal-tab{
+    border-top: 1px solid;
+}
+
+
+
+.browse {
+    border-top: 1px solid;
+
+}
+
+
+
+/* styling the tuBee-packages */
+
+.tuBee-packages {
+    border-top: 1px solid;
+}
+
+
+
+/* styling the history-tab */
+
+.history-tab{
+    border-top: 1px solid;
+}
+
+
+
+/* styling the sidebar footer */
+.side-footer {
+    border-top: 1px solid;
 }
