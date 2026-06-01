@@ -1,4 +1,4 @@
-
+@import url(https://fonts.google.com/);
 
 *{
     box-sizing: border-box;
@@ -6,6 +6,11 @@
     padding: 0;
     background: black;
     color: white;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    
 }
 
 
@@ -81,6 +86,10 @@ section {
  margin-top: -57px;
 }
 
+.sidebar img{
+    width: 25px;
+}
+
 .home-items{
 }
 
@@ -113,6 +122,11 @@ section {
     border-top: 1px solid;
 }
 
+.tuBee-packages img{
+    width: px;
+    height: 15px;
+}
+
 
 
 /* styling the history-tab */
@@ -127,3 +141,4 @@ section {
 .side-footer {
     border-top: 1px solid;
 }
+
