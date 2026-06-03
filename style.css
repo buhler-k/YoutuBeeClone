@@ -103,14 +103,18 @@ section {
 .home p {
     padding-right: 2px;
     margin-top: 6px;
+    padding-left: 15px;
 }
 
 .shorts {
     display: flex;
+    padding-top: 15px;
 }
 .shorts p {
     padding-right: 2px;
     margin-top: 6px;
+    padding-left: 15px;
+   
 }
 
 
@@ -124,13 +128,16 @@ section {
 .sub-channels img{
     height: 30px;
     width: 28px;
+    margin-left: -15px;
     margin-right: 17px;
 }
 
 .sub-channels li{
+    display: flex;
     padding-top: 10px;
+    padding-left: 15px;
+    
 }
-
 
 /* styling the personal-tab */
 
@@ -138,13 +145,32 @@ section {
     border-top: 1px solid;
 }
 
+.personal-tab li{
+    display: flex; 
+    padding-top: 10px;
+}
+
+.personal-tab  p{
+    padding-left: 15px;
+}
 
 
+/* styling the browse section */
 .browse {
+    
     border-top: 1px solid;
 
 }
 
+.browse li{
+    display: flex;
+    padding-top: 10px;
+   
+}
+
+.browse p{
+    padding-left: 15px;
+}
 
 
 /* styling the tuBee-packages */
@@ -153,24 +179,42 @@ section {
     border-top: 1px solid;
 }
 
+.tuBee-packages li{
+    display: flex;
+    padding-top: 20px;
+}
+
 .tuBee-packages img{
-    width: px;
-    height: 15px;
+    width: 35px;
+    height: 20px;
+    padding-right: 15px;
 }
 
 
 
 /* styling the history-tab */
 
-.history-tab{
+.history-tab {
+    display: flex;
     border-top: 1px solid;
+    padding-top: 9px;
+
 }
+
+.history-tab h5{
+    padding-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 15px;
+   
+}
+
 
 
 
 /* styling the sidebar footer */
 .side-footer {
     border-top: 1px solid;
+    padding-top: 15px;
 }
 
 /* styling the video section */
