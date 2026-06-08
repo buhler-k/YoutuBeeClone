@@ -6,6 +6,7 @@
     <title>YoutuBee</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="responsive.css">
 </head>
  
 <div id= "container">
@@ -20,42 +21,65 @@
     <div class="middle-nav">
         <form> 
             <input type="text" placeholder="Search">
-            <span class="material-symbols-outlined">search</span>
-            <button>search</button>
-            <button>voice</button>
         </form>
-
+        <span class="material-symbols-outlined">search</span>
+        <div class="voice">
+            <span class="material-symbols-outlined">mic</span>
+        </div>
     </div>
 
     <div class="right-nav">
-        <button><span class="material-symbols-outlined">add</span>create</button>
+        <button> <span class="material-symbols-outlined">add</span>create</button>
         <span class="material-symbols-outlined">notifications_unread</span></button>
-        <button>profile</button>
+        <span class="material-symbols-outlined">account_circle</span>
         
     </div> 
 </div>
 <body>
+
+    <input type="radio" name="interest-filter" id="filter-all" class="interest-input" checked>
+    <input type="radio" name="interest-filter" id="filter-music" class="interest-input">
+    <input type="radio" name="interest-filter" id="filter-anime" class="interest-input">
+    <input type="radio" name="interest-filter" id="filter-nature" class="interest-input">
+    <input type="radio" name="interest-filter" id="filter-thrillers" class="interest-input">
+    <input type="radio" name="interest-filter" id="filter-science" class="interest-input">
+    <input type="radio" name="interest-filter" id="filter-documentary" class="interest-input">
+
+    <input type="radio" name="tab-scroll" id="tab-scroll-0" class="scroll-pos" checked>
+    <input type="radio" name="tab-scroll" id="tab-scroll-1" class="scroll-pos">
         
     <div class="tab">
-        <ul id= "tab-list">
-            <li>All</li>
-            <li>Music</li>
-            <li>Mixes</li>
-            <li>Daffy Duck</li>
-            <li>Totally Spies</li>
-            <li>Anime</li>
-            <li>K-drama</li>
-            <li>Podcasts</li>
-            <li>Badminton World Federation</li>
-            <li>Sitcoms</li>
-            <li>Contemporary R&B</li>
-            <li>Neuroscience</li>
-            <li>Thrillers</li>
-            <li>Recently uploaded</li>
-        </ul>
+        <div class="tab-carousel">
+            <div class="tab-viewport">
+                <div id="tab-list" class="tab-track">
+                    <label for="filter-all" class="tab-label">All</label>
+                    <label for="filter-music" class="tab-label">Music</label>
+                    <button>Mixes</button>
+                    <button>Daffy Duck</button>
+                    <button>Totally Spies</button>
+                    <label for="filter-anime" class="tab-label">Anime</label>
+                    <button>K-drama</button>
+                    <button>Podcasts</button>
+                    <label for="filter-nature" class="tab-label">Nature Documentaries</label>
+                    <button>Sitcoms</button>
+                    <label for="filter-music" class="tab-label">Contemporary R&amp;B</label>
+                    <label for="filter-science" class="tab-label">Neuroscience</label>
+                    <label for="filter-thrillers" class="tab-label">Thrillers</label>
+                    <button>Recently uploaded</button>
+                </div>
+            </div>
+            <div class="tab-nav-slot">
+                <label for="tab-scroll-1" class="scroll-btn tab-nav-forward" aria-label="Scroll tabs forward">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </label>
+                <label for="tab-scroll-0" class="scroll-btn tab-nav-back" aria-label="Scroll tabs back">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </label>
+            </div>
+        </div>
     </div> 
     
-    <section>   
+    <section id="side-content">   
         <div class="sidebar">
 
             <div class="home-items">
@@ -75,29 +99,29 @@
 
                 <ul>
                     <li> <img src="./ASSETS/TED icon.jpg">
-                        <p>TED</p> </li>
+                        TED </li>
                     <li> <img src="./ASSETS/counttutts icon.jpg">
-                        <p>Counttuts</p></li>
+                        Counttuts</li>
                     <li> <img src="./ASSETS/brocode icon.jpg">
-                        <p>Bro Code</p> </li>
+                        Bro Code </li>
                     <li> <img src="./ASSETS/LawAndCrime icon.jpg">
-                        <p>Law&Crime</p></li>
+                        Law&Crime</li>
                     <li> <img src="./ASSETS/TrueCrime-Jack icon.jpg">
-                        <p>TrueCrime - Jack!</p></li>
+                        TrueCrime - Jack!</li>
                     <li> <img src="./ASSETS/ProgrammingWithMosh icon.jpg">
-                        <p>Programming with Mosh</p></li>
+                        Programming with Mosh</li>
                     <li> <img src="./ASSETS/AstrumEarth icon.jpg">
-                        <p>Astrum Earth</p></li>
+                        Astrum Earth</li>
                     <li> <img src="ASSETS/NationalGeographic icon.jpg">
-                        <p>National Geographic</p></li>
+                        National Geographic</li>
                     <li> <img src="./ASSETS/ForensicInvestigators icon.jpg">
-                        <p>Forensic Investigators</p></li>
+                        Forensic Investigators</li>
                     <li> <img src="./ASSETS/BecauseWeSaidSo icon.jpg">
-                        <p>Because We Said So</p></li>
+                        Because We Said So</li>
                     <li> <img src="./ASSETS/Beyonce icon.jpg">
-                        <p>Beyonce</p></li>
+                        Beyonce</li>
                     <li> <img src="./ASSETS/Mereba icon.jpg">
-                        <p>Mereba</p></li>
+                        Mereba</li>
                 </ul>
             </div><br>
             
@@ -105,19 +129,19 @@
                 <h3>You > </h3> 
                 <ul>
                     <li><span class="material-symbols-outlined">account_box</span> 
-                        <p>Your channel</p></li>
+                        Your channel</li>
                     <li><span class="material-symbols-outlined">history</span> 
-                        <p>History</p></li>
+                        History</li>
                     <li><span class="material-symbols-outlined">playlist_play</span> 
-                        <p>Playlists</p></li>
+                        Playlists</li>
                     <li><span class="material-symbols-outlined">schedule</span> 
-                        <p>Watch later</p></li>
+                        Watch later</li>
                     <li><span class="material-symbols-outlined">thumb_up</span> 
-                        <p>Liked videos</p></li>
+                        Liked videos</li>
                     <li><span class="material-symbols-outlined">video_library</span>
-                         <p>Your videos</p></li>
+                         Your videos</li>
                     <li><span class="material-symbols-outlined">download</span> 
-                        <p>Downloads</p></li>
+                        Downloads</li>
                 </ul>
             </div> <br>
             
@@ -126,13 +150,13 @@
                 
                 <ul>
                     <li><span class="material-symbols-outlined">music_note</span>
-                        <p>Music</p></li>
+                        Music</li>
                     <li><span class="material-symbols-outlined">sports_esports</span> 
-                        <p>Gaming</p></li>
+                        Gaming</li>
                     <li><span class="material-symbols-outlined">newspaper</span> 
-                        <p>News</p></li>
+                        News</li>
                     <li><span class="material-symbols-outlined">keyboard_arrow_down</span> 
-                        <p>Show more</p></li>
+                        Show more</li>
                 </ul>
             </div> <br>
             
@@ -141,20 +165,20 @@
 
                 <ul>
                     <li><img src="./ASSETS/YoutuBee premium icon.png">
-                    <p>YoutuBee Premium</p></li>
+                    YoutuBee Premium</li>
                     
                     <li><img src= "./ASSETS/YoutuBee music icon.png">
-                    <p>YoutuBee Music</p></li>
+                    YoutuBee Music</li>
 
                     <li><img src="./ASSETS/YoutuBee kids icon.svg">
-                    <p>YoutuBee Kids</p></li>
+                    YoutuBee Kids</li>
 
                 </ul>
             </div><br>
             
             <div class="history-tab">
                 <span class="material-symbols-outlined">Flag</span>
-                <h5>Report History</h5>
+                Report History
             </div> <br>
             
             <div class="side-footer">
@@ -172,69 +196,270 @@
         
     </section>
 
-    <main>
-        <section>
+    <main class="video-feed">
+        <section class="interest-group" data-interest="anime">
+            <h2 class="interest-heading">Anime</h2>
+            <input type="radio" name="scroll-anime" id="scroll-anime-0" class="scroll-pos" checked>
+            <input type="radio" name="scroll-anime" id="scroll-anime-1" class="scroll-pos">
+            <div class="video-carousel cards-4">
+                <div class="carousel-shell">
+                    <label for="scroll-anime-0" class="scroll-btn video-scroll-prev anime-from-1" aria-label="Previous anime video">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </label>
+                    <label for="scroll-anime-1" class="scroll-btn video-scroll-next anime-from-0" aria-label="Next anime video">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </label>
+                    <div class="interest-videos viewport">
+                        <div class="interest-track">
+                            <div class="vid5 video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/rRjwqjcMC3k?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/The Wise Goat profile icon.jpg" alt="Profile Icon">
+                                <h3>Erwin Smith war speech Japanese Ver. | Attack on Titan</h3>
+                                <p>The Wise Goat</p>
+                                <p>67K views • 4 years ago</p>
+                            </div>
+                            <div class="video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/wyiZWYMilgk?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/Crunchy roll profile icon.jpg" alt="Profile Icon">
+                                <h3>Demon Slayer: Kimetsu no Yaiba Infinity Castle | Official Trailer | Crunchyroll</h3>
+                                <p>Crunchyroll</p>
+                                <p>19M views • 1 year ago</p>
+                            </div>
+                            <div class="video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/KXiSdblIUzs?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/Crunchy roll profile icon.jpg" alt="Profile Icon">
+                                <h3>Dark Magic: Dark Cloaked Dimension Slash! | Black Clover</h3>
+                                <p>Crunchyroll</p>
+                                <p>4.9M views • 7 years ago</p>
+                            </div>
+                            <div class="video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/RYI-WG_HFV8?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/Crunchy roll profile icon.jpg" alt="Profile Icon">
+                                <h3>JUJUTSU KAISEN Season 3|Official Teaser|Crunchyroll</h3>
+                                <p>Crunchyroll</p>
+                                <p>17M views • 9 months ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <div class="video-info">
-                <div class="vid1">
-                    <iframe width="393.7" height="221.44" src="https://www.youtube.com/embed/oz-Y1Xzx5iQ?si=Jd2H0pCUY6n_ZVC5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <img src="./ASSETS/Earth Science profile icon.jpg" alt="Profile Icon">
-                    <h3>Five Wonders of our Universe | Universe|
-                        BBC Earth Science 
-                    </h3>
-                    <p>BBC Earth Science </p>
-                    <p>2M views  • 8 months ago</p>
-                   
+        <section class="interest-group" data-interest="podcast">
+            <h2 class="interest-heading">Podcast</h2>
+            <input type="radio" name="scroll-podcast" id="scroll-podcast-0" class="scroll-pos" checked>
+            <input type="radio" name="scroll-podcast" id="scroll-podcast-1" class="scroll-pos">
+            <div class="video-carousel cards-4">
+                <div class="carousel-shell">
+                    <label for="scroll-podcast-0" class="scroll-btn video-scroll-prev podcast-from-1" aria-label="Previous podcast video">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </label>
+                    <label for="scroll-podcast-1" class="scroll-btn video-scroll-next podcast-from-0" aria-label="Next podcast video">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </label>
+                    <div class="interest-videos viewport">
+                        <div class="interest-track">
+                            <div class="vid7 video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/c_5lX37ptJU?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/BecauseWeSaidSo icon.jpg" alt="Profile Icon">
+                                <h3>Ep.38: Self-Care as Self-Love.|#BecauseWeSaidSoPod</h3>
+                                <p>Because We Said So</p>
+                                <p>74K views • 3 months ago</p>
+                            </div>
+                            <div class="vid8 video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/TM5RUrYY8wo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/SMWX profile icon.jpg" alt="Profile Icon">
+                                <h3>Parliament decides on rules for Phala Phala Committee</h3>
+                                <p>SMWX</p>
+                                <p>14K views • 3 days ago</p>
+                            </div>
+                            <div class="video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/guqipDcWzho?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/Shudu Musida profile icon.jpg" alt="Profile Icon">
+                                <h3>Episode 7: The Conversation is the Cure</h3>
+                                <p>Shudu Musida</p>
+                                <p>17K views • 8 months ago</p>
+                            </div>
+                            <div class="video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/8kVh0EXZ-AA?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/Beyonce icon.jpg" alt="Profile Icon">
+                                <h3>Clarity, Respect & Vulnerability in Friendship</h3>
+                                <p>First</p>
+                                <p>988 views • 7 months ago</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="vid2">
-                    <iframe width="393.7" height="221.44" src="https://www.youtube.com/embed/vcUGp_94uBk?si=1L6eUWkfmSeOw5cG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <img src="./ASSETS/fern profile icon.jpg" alt="Profile Icon">
-                    <h3>The CIA's Most Valuable Spy</h3>
-                    <p>fern</p>
-                    <p>2.3M views • 3 weeks ago</p>
-                    
-                </div>
-                
-                <div class="vid3">
-                    <iframe width="393.7" height="221.44" src="https://www.youtube.com/embed/5OLtteIwwNs?si=lbjiYw-5Q17ZCUPO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <img src="./ASSETS/ColdFusion profile icon.jpg" alt="Profile Icon">
-                    <h3>Three Men Lost in Space - The Apollo 13 Disaster</h3>
-                    <p>ColdFusion</p>
-                    <p>17M views • 5 years ago </p>
-                </div>
-                
-                <div class="vid4">
-                    <iframe width="393.7" height="221.44" src="https://www.youtube.com/embed/zWMq7EXklGk?si=Ln0NxrlYjeQtwuja" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <img src="./ASSETS/Lazy Masquerade profile icon.jpg" alt="Profile Icon">
-                    <h3>Interpol's 4 Most Wanted, Explained</h3>
-                    <p>Lazy Masquerade</p>
-                    <p>776K views • 7 months ago</p>
-                    
-                </div>
-                
-                <div class="vid5">
-                    <iframe width="393.7" height="221.44" src="https://www.youtube.com/embed/rRjwqjcMC3k?si=3LgPwyOfinf79Jnf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <img src="./ASSETS/The Wise Goat profile icon.jpg" alt="Profile Icon">
-                    <h3>Erwin Smith war speech Japanese Ver. | Erwin Smith | Attack on Titan</h3>
-                    <p>The Wise Goat</p>
-                    <p>67K views • 4 years ago </p>
-                    
-                </div>
+        <section class="interest-group" data-interest="nature">
+            <h2 class="interest-heading">Nature Documentaries</h2>
+            <input type="radio" name="scroll-nature" id="scroll-nature-0" class="scroll-pos" checked>
+            <input type="radio" name="scroll-nature" id="scroll-nature-1" class="scroll-pos">
+            <div class="video-carousel cards-4">
+                <div class="carousel-shell">
+                    <label for="scroll-nature-0" class="scroll-btn video-scroll-prev nature-from-1" aria-label="Previous nature video">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </label>
+                    <label for="scroll-nature-1" class="scroll-btn video-scroll-next nature-from-0" aria-label="Next nature video">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </label>
+                    <div class="interest-videos viewport">
+                        <div class="interest-track">
+                            <div class="vid1 video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/oz-Y1Xzx5iQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/Earth Science profile icon.jpg" alt="Profile Icon">
+                                <h3>Five Wonders of our Universe | BBC Earth Science</h3>
+                                <p>BBC Earth Science</p>
+                                <p>2M views • 8 months ago</p>
+                            </div>
+                            <div class="vid10 video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/CzSwnY1oK-w?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/Top Unreal Travel profile icon.jpg" alt="Profile Icon">
+                                <h3>Which Species REIGNS SUPREME in the Pacific Ocean's Ecosystem</h3>
+                                <p>Top Unreal Travel</p>
+                                <p>766K views • 3 months ago</p>
+                            </div>
+                            <div class="vid12 video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/xvyz6ZL8tTI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/Nat Geo Animals profile icon.jpg" alt="Profile Icon">
+                                <h3>Folowing the Jade Eyed Leopard | Nat Geo Wild</h3>
+                                <p>Nat Geo Animals</p>
+                                <p>911K views • 1 year ago</p>
+                            </div>
 
-                <div class="vid6">
-                    <iframe width="393.7" height="221.44" src="https://www.youtube.com/embed/IUdjWTG7CTU?si=YsSXSJHM1pwWGZjp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <img src="./ASSETS/spark profile icon.jpg" alt="Profile Icon">
-                    <h3>The Disappearance of Flight MH370: Minute By Minute As It Happened</h3>
-                    <p>Spark</p>
-                    <p>452K views • 6 months ago</p>
-                   
+                            <div class="video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/KFMbAeYbiW0?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="ASSETS/NationalGeographic icon.jpg" alt="Profile Icon">
+                                <h3>Worlds Deadliest Jellyfish(Full Episode) | SPECIAL | Nat Geo Animals</h3>
+                                <p>Nat Geo Animals</p>
+                                <p>179K views • 6 months ago</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
+        <section class="interest-group" data-interest="thrillers">
+            <h2 class="interest-heading">Thrillers</h2>
+            <input type="radio" name="scroll-thrillers" id="scroll-thrillers-0" class="scroll-pos" checked>
+            <input type="radio" name="scroll-thrillers" id="scroll-thrillers-1" class="scroll-pos">
+            <div class="video-carousel cards-4">
+                <div class="carousel-shell">
+                    <label for="scroll-thrillers-0" class="scroll-btn video-scroll-prev thrillers-from-1" aria-label="Previous thriller video">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </label>
+                    <label for="scroll-thrillers-1" class="scroll-btn video-scroll-next thrillers-from-0" aria-label="Next thriller video">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </label>
+                    <div class="interest-videos viewport">
+                        <div class="interest-track">
+                            <div class="vid4 video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/zWMq7EXklGk?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/Lazy Masquerade profile icon.jpg" alt="Profile Icon">
+                                <h3>Interpol's 4 Most Wanted, Explained</h3>
+                                <p>Lazy Masquerade</p>
+                                <p>776K views • 7 months ago</p>
+                            </div>
+                            <div class="vid11 video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/HTrNcjcOHK0?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/TrueCrime-Jack icon.jpg" alt="Profile Icon">
+                                <h3>Nobody Knew Who They Really Were - Crime Documentary</h3>
+                                <p>True Crime - Jack!</p>
+                                <p>12K views • 21 hours ago</p>
+                            </div>
+
+                            <div class="video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/0-5kEM8YkcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/LawAndCrime icon.jpg" alt="Profile Icon">
+                                <h3>Live: High-Profile Criminal Trial Coverage</h3>
+                                <p>Law&Crime</p>
+                                <p>1.1M views • 1 week ago</p>
+                            </div>
+                            <div class="video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/SDFZwJ_zb0s?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/Bailey Sarian profile icon.jpg" alt="Profile Icon">
+                                <h3>Murder on the Web:Catfish Gone Wrong! | Mystery & Makeup | Bailey Sarian</h3>
+                                <p>Bailey Sarian</p>
+                                <p>9.6M views • 3 years ago</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interest-group" data-interest="documentary">
+            <h2 class="interest-heading">Documentary</h2>
+            <input type="radio" name="scroll-documentary" id="scroll-documentary-0" class="scroll-pos" checked>
+            <input type="radio" name="scroll-documentary" id="scroll-documentary-1" class="scroll-pos">
+            <div class="video-carousel cards-4">
+                <div class="carousel-shell">
+                    <label for="scroll-documentary-0" class="scroll-btn video-scroll-prev documentary-from-1" aria-label="Previous documentary video">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </label>
+                    <label for="scroll-documentary-1" class="scroll-btn video-scroll-next documentary-from-0" aria-label="Next documentary video">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </label>
+                    <div class="interest-videos viewport">
+                        <div class="interest-track">
+                            <div class="vid2 video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/vcUGp_94uBk?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/fern profile icon.jpg" alt="Profile Icon">
+                                <h3>The CIA's Most Valuable Spy</h3>
+                                <p>fern</p>
+                                <p>2.3M views • 3 weeks ago</p>
+                            </div>
+                            <div class="vid6 video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/IUdjWTG7CTU?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/spark profile icon.jpg" alt="Profile Icon">
+                                <h3>The Disappearance of Flight MH370: Minute By Minute</h3>
+                                <p>Spark</p>
+                                <p>452K views • 6 months ago</p>
+                            </div>
+                            <div class="vid9 video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/ZYQGBuaYnCw?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/Volksgeist profile icon.jpg" alt="Profile Icon">
+                                <h3>The CIA's Greatest Hits</h3>
+                                <p>Volksgeist</p>
+                                <p>825K views • 1 month ago</p>
+                            </div>
+                            <div class="video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/ZrN4bKKMlLU?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/fern profile icon.jpg" alt="Profile Icon">
+                                <h3>The Hunt for America's Deadliest Hitman</h3>
+                                <p>Fern</p>
+                                <p>8.9M views • 2 years ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interest-group" data-interest="science">
+            <h2 class="interest-heading">Neuroscience</h2>
+            <div class="video-carousel no-scroll">
+                <div class="carousel-shell">
+                    <div class="interest-videos viewport">
+                        <div class="interest-track">
+                            <div class="vid3 video-card">
+                                <iframe width="350" height="221.44" src="https://www.youtube.com/embed/5OLtteIwwNs?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img src="./ASSETS/ColdFusion profile icon.jpg" alt="Profile Icon">
+                                <h3>Three Men Lost in Space - The Apollo 13 Disaster</h3>
+                                <p>ColdFusion</p>
+                                <p>17M views • 5 years ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    
+ 
 </body>
 
 </html>

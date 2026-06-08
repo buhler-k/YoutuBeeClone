@@ -9,9 +9,18 @@
 }
 
 
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 body {
     font-family: "Roboto", sans-serif;
+}
 
+.scroll-pos {
+    display: none;
 }
 
 
@@ -34,37 +43,198 @@ body {
 
 .left-nav{
     display: flex;
+    gap: 10px;
+    margin-left: 12px;
 }
 
 .middle-nav {
+    display: flex;
+    margin-left: 70px;
+    gap: 20px;
+}
 
-   /* padding-right: 65px; */
+.middle-nav form{
+  display: flex;
+  
+}
+
+.middle-nav span{
+    background: rgba(255, 255, 255, 0.2);
+    height: 40px;
+    width: 55px;
+    padding-top: 7px;
+    padding-left: 15px;
+    padding-right: 20px;
+    border-radius: 8px;
+    margin-left: -75px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+
 
 }
 
+.middle-nav input{
+    height: 40px;
+    width: 500px;
+    padding-left: 15px;
+    border-radius: 8px;
+}
+
+.voice .material-symbols-outlined {
+    margin-left: 15px;
+}
+
 .right-nav {
-   
+    margin-right: 25px;
+
+}
+
+.right-nav button{
+    background: rgba(255, 255, 255, 0.2);
+    width: 95px;
+    height: 40px;
+    border-radius: 8px;
+    padding-bottom: 15px;
+    
+}
+
+.right-nav button > .material-symbols-outlined{
+    background: transparent;
+    margin-right: 15px;
+    margin-top: 5px;
+
 }
 
 /* styling the tab*/
 
 .tab {
     margin-top: 55px;
-    margin-left: 120px;
-    padding-left: 120px;
-    
-    
-    
-
+    margin-left: 225px;
+    margin-right: 24px;
+    max-width: 1100px;
 }
-#tab-list { 
+
+.tab-carousel {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    list-style-type: none;
-    gap: 15px;
-    
+    gap: 8px;
 }
+
+.tab-viewport {
+    flex: 1;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#tab-list,
+.tab-track {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    list-style-type: none;
+    transition: transform 0.35s ease;
+    width: max-content;
+}
+
+#tab-list button,
+#tab-list .tab-label {
+    height: 40px;
+    min-width: 88px;
+    width: auto;
+    font-weight: bold;
+    overflow: visible;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: 0.4s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    padding: 0 16px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+#tab-list > button:hover,
+#tab-list .tab-label:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.interest-input {
+    display: none;
+}
+
+#filter-all:checked ~ .tab label[for="filter-all"],
+#filter-podcast:checked ~ .tab label[for="filter-podcast"],
+#filter-anime:checked ~ .tab label[for="filter-anime"],
+#filter-nature:checked ~ .tab label[for="filter-nature"],
+#filter-thrillers:checked ~ .tab label[for="filter-thrillers"],
+#filter-science:checked ~ .tab label[for="filter-science"],
+#filter-documentary:checked ~ .tab label[for="filter-documentary"] {
+    background: white;
+    color: black;
+    border-color: white;
+}
+
+/* tab horizontal scroll buttons */
+
+.scroll-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.12);
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s;
+}
+
+.scroll-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.scroll-btn .material-symbols-outlined {
+    font-size: 22px;
+}
+
+.tab-nav-slot {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+}
+
+.tab-nav-slot .scroll-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#tab-scroll-0:checked ~ .tab .tab-nav-forward {
+    display: flex;
+}
+
+#tab-scroll-1:checked ~ .tab .tab-nav-back {
+    display: flex;
+}
+
+#tab-scroll-0:checked ~ .tab .tab-track {
+    transform: translateX(0);
+}
+
+#tab-scroll-1:checked ~ .tab .tab-track {
+    transform: translateX(-420px);
+}
+
+
+
+
+
 
 
 /* styling content */
@@ -76,9 +246,12 @@ body {
 }
 
 /* styling the section and sidebar */
-section {
+#side-content {
    display:flex;
    width: 20vw;
+   height: max-content;
+ 
+  
 }
 
 .sidebar {
@@ -95,6 +268,12 @@ section {
     width: 25px;
 }
 
+.home:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    border-radius: 5%;
+    transition: background 0.2s;
+}
 
 .home{
     display: flex;
@@ -139,6 +318,16 @@ section {
     
 }
 
+.sub-channels ul li:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+
+
+
+
 /* styling the personal-tab */
 
 .personal-tab{
@@ -150,26 +339,36 @@ section {
     padding-top: 10px;
 }
 
-.personal-tab  p{
-    padding-left: 15px;
+.personal-tab ul li:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.personal-tab  span{
+    padding-right: 15px;
 }
 
 
 /* styling the browse section */
 .browse {
-    
     border-top: 1px solid;
 
 }
 
 .browse li{
     display: flex;
-    padding-top: 10px;
-   
+    padding-top: 10px; 
 }
 
-.browse p{
-    padding-left: 15px;
+.browse ul li:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.browse span{
+    padding-right: 15px;
 }
 
 
@@ -184,6 +383,11 @@ section {
     padding-top: 20px;
 }
 
+.tuBee-packages ul li:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
 .tuBee-packages img{
     width: 35px;
     height: 20px;
@@ -199,6 +403,12 @@ section {
     border-top: 1px solid;
     padding-top: 9px;
 
+}
+
+.history-tab:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
 }
 
 .history-tab h5{
@@ -219,12 +429,179 @@ section {
 
 /* styling the video section */
 
-main {
-    margin-top: -1050px;
+main.video-feed {
+    margin-top: -1457px;
+    margin-left: 225px;
+    max-width: 1100px;
+    padding-bottom: 40px;
+    overflow: hidden;
 }
-.video-info {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+.interest-group {
+    margin-bottom: 36px;
+}
+
+.interest-heading {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff0033;
+    letter-spacing: 0.3px;
+}
+
+/* video row carousel */
+
+.carousel-shell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.interest-videos.viewport {
+    flex: 1;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.interest-track {
+    display: flex;
     gap: 20px;
-    margin-left: 270px;
+    transition: transform 0.35s ease;
+    width: max-content;
+}
+
+.video-carousel .video-card {
+    flex: 0 0 337px;
+    width: 337px;
+    min-width: 0;
+}
+
+.video-carousel .video-card iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+}
+
+.video-carousel .scroll-btn {
+    display: flex;
+}
+
+.video-carousel.no-scroll .scroll-btn {
+    display: none;
+}
+
+.video-carousel.no-scroll .video-card {
+    flex: 0 0 calc((1100px - 40px) / 3);
+    max-width: calc((1100px - 40px) / 3);
+}
+
+.interest-videos img {
+    padding-top: 12px;
+    display: flex;
+    height: 28px;
+}
+
+.interest-videos h3 {
+    margin-left: 27px;
+    margin-top: -18px;
+    font-size: 15px;
+}
+
+.interest-videos p {
+    margin-left: 27px;
+}
+
+/* cards-4 carousel: show 3, scroll by 1 */
+
+.video-carousel.cards-4 .video-scroll-prev,
+.video-carousel.cards-4 .video-scroll-next {
+    display: none;
+}
+
+#scroll-anime-0:checked ~ .video-carousel.cards-4 .anime-from-0.video-scroll-next,
+#scroll-podcast-0:checked ~ .video-carousel.cards-4 .podcast-from-0.video-scroll-next,
+#scroll-nature-0:checked ~ .video-carousel.cards-4 .nature-from-0.video-scroll-next,
+#scroll-thrillers-0:checked ~ .video-carousel.cards-4 .thrillers-from-0.video-scroll-next,
+#scroll-documentary-0:checked ~ .video-carousel.cards-4 .documentary-from-0.video-scroll-next {
+    display: flex;
+}
+
+#scroll-anime-1:checked ~ .video-carousel.cards-4 .anime-from-1.video-scroll-prev,
+#scroll-podcast-1:checked ~ .video-carousel.cards-4 .podcast-from-1.video-scroll-prev,
+#scroll-nature-1:checked ~ .video-carousel.cards-4 .nature-from-1.video-scroll-prev,
+#scroll-thrillers-1:checked ~ .video-carousel.cards-4 .thrillers-from-1.video-scroll-prev,
+#scroll-documentary-1:checked ~ .video-carousel.cards-4 .documentary-from-1.video-scroll-prev {
+    display: flex;
+}
+
+#scroll-anime-0:checked ~ .video-carousel.cards-4 .interest-track,
+#scroll-podcast-0:checked ~ .video-carousel.cards-4 .interest-track,
+#scroll-nature-0:checked ~ .video-carousel.cards-4 .interest-track,
+#scroll-thrillers-0:checked ~ .video-carousel.cards-4 .interest-track,
+#scroll-documentary-0:checked ~ .video-carousel.cards-4 .interest-track {
+    transform: translateX(0);
+}
+
+#scroll-anime-1:checked ~ .video-carousel.cards-4 .interest-track,
+#scroll-podcast-1:checked ~ .video-carousel.cards-4 .interest-track,
+#scroll-nature-1:checked ~ .video-carousel.cards-4 .interest-track,
+#scroll-thrillers-1:checked ~ .video-carousel.cards-4 .interest-track,
+#scroll-documentary-1:checked ~ .video-carousel.cards-4 .interest-track {
+    transform: translateX(-357px);
+}
+
+/* interest tab filtering — CSS only */
+
+#filter-all:checked ~ main .interest-group {
+    display: block;
+}
+
+#filter-anime:checked ~ main .interest-group {
+    display: none;
+}
+
+#filter-anime:checked ~ main .interest-group[data-interest="anime"] {
+    display: block;
+}
+
+#filter-podcast:checked ~ main .interest-group {
+    display: none;
+}
+
+#filter-podcast:checked ~ main .interest-group[data-interest="podcast"] {
+    display: block;
+}
+
+#filter-nature:checked ~ main .interest-group {
+    display: none;
+}
+
+#filter-nature:checked ~ main .interest-group[data-interest="nature"] {
+    display: block;
+}
+
+#filter-thrillers:checked ~ main .interest-group {
+    display: none;
+}
+
+#filter-thrillers:checked ~ main .interest-group[data-interest="thrillers"] {
+    display: block;
+}
+
+#filter-science:checked ~ main .interest-group {
+    display: none;
+}
+
+#filter-science:checked ~ main .interest-group[data-interest="science"] {
+    display: block;
+}
+
+#filter-documentary:checked ~ main .interest-group {
+    display: none;
+}
+
+#filter-documentary:checked ~ main .interest-group[data-interest="documentary"] {
+    display: block;
 }

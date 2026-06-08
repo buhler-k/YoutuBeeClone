@@ -1,1 +1,210 @@
-!
+@media screen and (max-width: 480px) { 
+    #container {
+        margin-bottom: -25px;
+    }
+    
+    #logo{
+        height: 60vh;
+        width: 70vw;
+    }
+
+    #logo a{
+        height: 25vh;
+        width: 25vw;
+    }
+
+    /* left nav */
+    .left-nav {
+        display: flex;
+        margin-top: -200px;
+    }
+
+    .left-nav span{
+        width: 0px;
+        height: 0px;
+    }
+
+    /* middle nav */
+
+    .middle-nav {
+        display: flex;
+    }
+
+    .middle-nav form{
+        height: 0px;
+        width: 0px;
+    }
+    .middle-nav span{
+        margin-left: 950px;
+        margin-bottom: 200px;
+    }
+
+    .middle-nav voice {
+        height: 0vh;
+        width: 0vw;
+        margin: 0 0 0 0;
+    }
+
+    .middle-nav input{
+        width: 0px;
+        height: 0px;
+    }
+
+
+    .right-nav {
+       width: 0px;
+       height: 0px;
+    }
+    
+    #side-content{
+        width: 300px;
+        margin-top: -190px;
+    }
+
+    .sidebar {
+        width: 300px;
+        font-size: 35px; 
+    }
+
+    .sub-channels {
+        font-size: 35px;
+    }
+
+    .sub-channels li{
+        padding-bottom: 35px;
+        font-size: 40px;
+    }
+
+    .browse li{
+        padding-bottom: 35px;
+        
+    }
+
+    .personal-tab li{
+        padding-bottom: 35px;
+    }
+
+    .tuBee-packages {
+        margin-top: 0px;
+        gap: 20px;
+    }
+
+    .tuBee-packages {
+        padding-bottom: 35px;
+    }
+
+    .side-footer{
+        padding-bottom: 35px;
+    }
+
+    .tab {
+        margin-left: 55px;
+        max-width: 95vw;
+    }
+
+    #tab-list button,
+    #tab-list .tab-label {
+        min-width: 120px;
+        font-size: 24px;
+        height: 56px;
+    }
+
+    .scroll-btn {
+        width: 48px;
+        height: 48px;
+    }
+
+    .tab-nav-slot {
+        width: 48px;
+        height: 48px;
+    }
+
+    #tab-scroll-1:checked ~ .tab .tab-track {
+        transform: translateX(-320px);
+    }
+
+    main.video-feed {
+        margin-left: 55px;
+        margin-top: -2200px;
+        max-width: 95vw;
+    }
+
+    .interest-heading {
+        font-size: 40px;
+        margin-bottom: 24px;
+    }
+
+    .video-carousel .video-card {
+        flex: 0 0 85vw;
+        width: 85vw;
+    }
+
+    .video-carousel.no-scroll .video-card {
+        flex: 0 0 85vw;
+        max-width: 85vw;
+    }
+
+    #scroll-anime-1:checked ~ .video-carousel.cards-4 .interest-track,
+    #scroll-podcast-1:checked ~ .video-carousel.cards-4 .interest-track,
+    #scroll-nature-1:checked ~ .video-carousel.cards-4 .interest-track,
+    #scroll-thrillers-1:checked ~ .video-carousel.cards-4 .interest-track,
+    #scroll-documentary-1:checked ~ .video-carousel.cards-4 .interest-track {
+        transform: translateX(calc(-85vw - 20px));
+    }
+
+    .interest-videos .video-card {
+        padding-bottom: 30px;
+    }
+
+    .interest-videos iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 10;
+    }
+
+    .interest-videos img {
+        height: 60px;
+        width: 45px;
+    }
+
+    .interest-videos h3 {
+        margin-top: -55px;
+        margin-left: 58px;
+        font-size: 45px;
+    }
+
+    .interest-videos p {
+        margin-left: 58px;
+        font-size: 40px;
+    }
+    
+   
+
+   
+}
+
+
+/* @media screen and (min-width: 1200px){
+    #container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .left-nav {
+        display: flex;
+    }
+
+    .left-nav span{
+        margin-bottom: 80px;
+    }
+    
+    .right-nav {
+        margin-right: 5px;
+    }
+
+    .right-nav button{
+        padding-right: px;
+    } */
