@@ -31,11 +31,6 @@
         display: none;
     }
 
-
-    main.video-feed {
-        
-    }
-
     .interest-group{
         margin-top: -15px;
     }
@@ -85,6 +80,14 @@
     .interest-heading {
         font-size: 40px;
         margin-bottom: 24px;
+    }
+
+    .interest-suggestions {
+        max-width: 90vw;
+    }
+
+    .interest-suggestions .suggestion-line {
+        font-size: 15px;
     }
 
     .video-carousel .video-card {
