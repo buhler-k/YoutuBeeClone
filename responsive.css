@@ -1,101 +1,53 @@
 @media screen and (max-width: 480px) { 
     #container {
         margin-bottom: -25px;
+        height: 55px;
     }
     
     #logo{
-        height: 60vh;
-        width: 70vw;
+        height: 75px;
+        width: 150px;
     }
 
-    #logo a{
-        height: 25vh;
-        width: 25vw;
-    }
-
-    /* left nav */
-    .left-nav {
-        display: flex;
-        margin-top: -200px;
-    }
 
     .left-nav span{
-        width: 0px;
-        height: 0px;
+        display: none;
     }
-
-    /* middle nav */
-
-    .middle-nav {
-        display: flex;
-    }
-
-    .middle-nav form{
-        height: 0px;
-        width: 0px;
-    }
-    .middle-nav span{
-        margin-left: 950px;
-        margin-bottom: 200px;
-    }
-
+   
     .middle-nav voice {
-        height: 0vh;
-        width: 0vw;
-        margin: 0 0 0 0;
+       display: none;
     }
 
     .middle-nav input{
-        width: 0px;
-        height: 0px;
-    }
+        display: none;
+    } 
 
 
     .right-nav {
-       width: 0px;
-       height: 0px;
+      display: none;
     }
     
     #side-content{
-        width: 300px;
-        margin-top: -190px;
+        display: none;
     }
 
-    .sidebar {
-        width: 300px;
-        font-size: 35px; 
-    }
 
-    .sub-channels {
-        font-size: 35px;
-    }
-
-    .sub-channels li{
-        padding-bottom: 35px;
-        font-size: 40px;
-    }
-
-    .browse li{
-        padding-bottom: 35px;
+    main.video-feed {
         
     }
 
-    .personal-tab li{
-        padding-bottom: 35px;
+    .interest-group{
+        margin-top: -15px;
     }
 
-    .tuBee-packages {
-        margin-top: 0px;
-        gap: 20px;
+    .video-card:first-child {
+        display: block;
+        
     }
 
-    .tuBee-packages {
-        padding-bottom: 35px;
-    }
 
-    .side-footer{
-        padding-bottom: 35px;
-    }
+
+
 
     .tab {
         margin-left: 55px;
@@ -124,8 +76,9 @@
     }
 
     main.video-feed {
-        margin-left: 55px;
-        margin-top: -2200px;
+        margin-top: 0px;
+        padding-top: 25px;
+        margin-left: 7px;
         max-width: 95vw;
     }
 
@@ -157,8 +110,6 @@
     }
 
     .interest-videos iframe {
-        width: 100%;
-        height: auto;
         aspect-ratio: 16 / 10;
     }
 
@@ -170,12 +121,12 @@
     .interest-videos h3 {
         margin-top: -55px;
         margin-left: 58px;
-        font-size: 45px;
+        font-size: 20px;
     }
 
     .interest-videos p {
         margin-left: 58px;
-        font-size: 40px;
+        font-size: 20px;
     }
     
    
@@ -253,8 +204,8 @@
 }
 
 
-/*  */
-/* @media screen and (min-width: 1200px){
+
+@media screen and (max-width: 1200px) and (min-width: 1025px){
     #container {
         display: flex;
         flex-direction: row;
@@ -275,6 +226,4 @@
         margin-right: 5px;
     }
 
-    .right-nav button{
-        padding-right: px;
-    } */
+}
